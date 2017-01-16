@@ -2,6 +2,8 @@
 window.appleMusicPluginPlaying = (function(){})
 window.appleMusicPluginSeeked = (function(){})
 window.appleMusicPluginStopped = (function(){})
+window.appleMusicPluginTrackChanged = (function(){})
+window.appleMusicPluginTimeUpdate = (function(){})
 module.exports = {
     getCountryCode: function (successCallback, errorCallback) {
         cordova.exec(successCallback, errorCallback, "AppleMusic", "getCountryCode", []);
@@ -27,8 +29,18 @@ module.exports = {
     onStop: function(f) {
         window.appleMusicPluginStopped = f
     },
+    //use track index
+    onTrackChanged: function(f) {
+        window.appleMusicPluginTrackChanged = f
+    },
+    onTimeUpdate: function(f) {
+        window.appleMusicPluginTimeUpdate = f
+    },
     pause: function (successCallback, errorCallback) {
         cordova.exec(successCallback, errorCallback, "AppleMusic", "pause", []);
+    },
+    addTrackToLib: function (trackId, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "AppleMusic", "addTrackToLib", [trackId]);
     },
     playTrack: function (trackId, successCallback, errorCallback) {
         cordova.exec(successCallback, errorCallback, "AppleMusic", "playTrack", [trackId]);
@@ -44,5 +56,11 @@ module.exports = {
     },
     stop: function (successCallback, errorCallback) {
         cordova.exec(successCallback, errorCallback, "AppleMusic", "stop", []);
+    }
+    skip: function (successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "AppleMusic", "skip", []);
+    }
+    prev: function (successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "AppleMusic", "prev", []);
     }
 };

@@ -3,14 +3,14 @@
   "version": "0.2.5",
   "description": "Queue up songs to play using an Apple Music premium account",
   "cordova": {
-    "id": "cordova-plugin-apple-music",
+    "id": "cordova-plugin-apple-music-2",
     "platforms": [
       "ios"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zwand19/CordovaAppleMusic.git"
+    "url": "git+https://github.com/bunmiedee/CordovaAppleMusic"
   },
   "keywords": [
     "ecosystem:cordova",
@@ -25,7 +25,7 @@
   "author": "Zachary Wand",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zwand19/CordovaAppleMusic/issues"
+    "url": "https://github.com/bunmiedee/CordovaAppleMusic"
   },
-  "homepage": "https://github.com/zwand19/CordovaAppleMusic#readme"
+  "homepage": "https://github.com/bunmiedee/CordovaAppleMusic#readme"
 }
