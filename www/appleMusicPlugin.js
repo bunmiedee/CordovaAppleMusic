@@ -59,7 +59,7 @@ module.exports = {
     }
     skip: function (successCallback, errorCallback) {
         cordova.exec(successCallback, errorCallback, "AppleMusic", "skip", []);
-    }
+    },
     prev: function (successCallback, errorCallback) {
         cordova.exec(successCallback, errorCallback, "AppleMusic", "prev", []);
     }
